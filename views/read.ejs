@@ -1,0 +1,36 @@
+<%- include('header')%>
+    <%- include('nav')%>
+        <div class="main">
+            <% cool.forEach(function(e, index){ %>
+
+                <div class="card">
+                    <div class="top">
+                        <div class="img">
+                            <img src="<%= e.dp%>" alt="">
+                        </div>
+                        <div class="rit">
+                            <h1>
+                                <%= e.name%>
+                            </h1>
+                            <h5>
+                                <%= e.title%>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="mid">
+                        <img src="<%= e.main%>" alt="">
+                    </div>
+                    <div class="bot">
+                        <div class="l">
+                                    <a href="/like/<%= index%>">  <h3><i class="ri-heart-3-line"></i><%= e.like%></h3> </a>
+                                
+                        </div>
+                        <div class="r">
+                            <a href="/update/<%= index%>"><button>Update</button></a>
+                            <a href="/delete/<%= index%>"><button>Delete</button></a>
+                        </div>
+                    </div>
+                </div>
+                <%})%>
+        </div>
+        <%- include('footer')%>

@@ -1,0 +1,15 @@
+<%- include('header')%>
+<%- include('nav')%>
+<div class="main">
+    <form action="/update/<%= index%>" method="post">
+        
+        <input value=" <%= entry.dp%>" type="url" name="dp" placeholder="Upload DP" id="">
+        <input value=" <%= entry.name%>" type="text" name="name" placeholder="Enter Your Name" id="">
+        <input value=" <%= entry.title%>" type="text" name="title" placeholder="Enter Title" id="">
+        <input value=" <%= entry.subtitle%>" type="text" name="subtitle" placeholder="Enter Text for post" id="">
+        <input value=" <%= entry.main%>" type="url" name="main" placeholder="Upload image" id="">
+        <button>Submit</button>
+    </form>
+</div>
+
+<%- include('footer')%>
